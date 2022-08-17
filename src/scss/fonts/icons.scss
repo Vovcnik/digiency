@@ -1,0 +1,80 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-arrow-up-fill:before {
+	content: "\e901";
+}
+._icon-code-line:before {
+	content: "\e905";
+}
+._icon-copyright-fill:before {
+	content: "\e907";
+}
+._icon-Dark:before {
+	content: "\e900";
+}
+._icon-facebook-fill:before {
+	content: "\e909";
+}
+._icon-file-line:before {
+	content: "\e90b";
+}
+._icon-instagram-fill:before {
+	content: "\e90c";
+}
+._icon-Light:before {
+	content: "\e902";
+}
+._icon-menu-line:before {
+	content: "\e90f";
+}
+._icon-message-circle:before {
+	content: "\e906";
+}
+._icon-person:before {
+	content: "\e908";
+}
+._icon-search-line:before {
+	content: "\e911";
+}
+._icon-send-plane-fill:before {
+	content: "\e912";
+}
+._icon-settings-4-line:before {
+	content: "\e913";
+}
+._icon-share-box-line:before {
+	content: "\e914";
+}
+._icon-skype-fill:before {
+	content: "\e915";
+}
+._icon-timer1:before {
+	content: "\e90a";
+}
+._icon-twitter-fill:before {
+	content: "\e916";
+}
+._icon-location:before {
+	content: "\e90d";
+}
+._icon-phone-call:before {
+	content: "\e903";
+}
+._icon--email:before {
+	content: "\e904";
+}
