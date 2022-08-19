@@ -24,9 +24,7 @@
 ._icon-copyright-fill:before {
 	content: "\e907";
 }
-._icon-Dark:before {
-	content: "\e900";
-}
+
 ._icon-facebook-fill:before {
 	content: "\e909";
 }
@@ -38,6 +36,12 @@
 }
 ._icon-Light:before {
 	content: "\e902";
+	color: #fff;
+	font-size: 24px;
+}
+._icon-Dark:before {
+	content: "\e900";
+	font-size: 24px;
 }
 ._icon-menu-line:before {
 	content: "\e90f";

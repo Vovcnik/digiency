@@ -1,9 +1,192 @@
 //====================================================================================================
+.header {
+	// .header__container
+	position: absolute;
+	width: 100%;
+	background: #ffffff;
+
+	/* Effect-1 */
+
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+
+	&._header-scroll {
+		position: fixed;
+		top: -200%;
+	}
+	&._header-show {
+		transition: all 0.3s ease 0s;
+		top: 0;
+	}
+	&__container {
+	}
+
+	// .header__menu
+
+	&__menu {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+html.dark .menu-open {
+	background-color: #fff;
+}
+
+.menu {
+	// .menu__logo
+
+	&__logo {
+		padding: 26px 0;
+		margin: 0px 77px 0px 0px;
+		@media (max-width: $mobile) {
+			margin: 0px 0px 0px 0px;
+		}
+		img {
+			max-width: 83px;
+		}
+
+		@media (max-width: $tablet) {
+			margin: 0px 25px 0px 0px;
+		}
+	}
+
+	// .menu__body
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	// .menu__list
+
+	&__list {
+		@media (max-width: $mobile) {
+			position: fixed;
+			right: 2%;
+			z-index: -1;
+			transform: translate(0px, -100%);
+			transition: all 0.3s ease 0s;
+			.menu-open & {
+				opacity: 1;
+				transform: translate(0px, 80%);
+
+				box-shadow: 0px 1px 3px $BlackColor;
+				text-align: right;
+				padding: 15px;
+			}
+		}
+	}
+
+	// .menu__item
+
+	&__item {
+	}
+
+	// .menu__link
+
+	&__link {
+		font-weight: 500;
+		@include adaptiveValue("font-size", 20, 16);
+		margin: 0px 38px 0px 0px;
+		color: $BlackColor;
+		line-height: math.div(20, 25);
+		transition: all 0.3s ease 0s;
+		@media (max-width: $tablet) {
+			font-size: 16px;
+			margin: 0px 16px 0px 0px;
+		}
+		@media (min-width: $tablet) {
+			&:hover {
+				text-decoration: underline;
+				color: $OrangeColor;
+			}
+		}
+		@media (max-width: $mobile) {
+			display: block;
+			padding-bottom: 15px;
+			margin: 0px 0px 0px 0px;
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+}
+.logo {
+	font-weight: 600;
+	font-size: 30px;
+	span {
+		color: $OrangeColor;
+	}
+}
+.home {
+}
+
+.page {
+	// .page__action
+
+	&__action {
+	}
+}
+
+.page__theme {
+	width: 30px;
+	height: 30px;
+	flex: 0 0 30px;
+	cursor: pointer;
+}
+.page__action {
+	position: relative;
+}
+.page__reset {
+	opacity: 0;
+	visibility: hidden;
+}
+.page__reset.active {
+	opacity: 1;
+	visibility: visible;
+}
+.page__reset::before {
+	content: "x";
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	width: 10px;
+	height: 10px;
+	font-size: 10px;
+	border-radius: 50%;
+	line-height: 10px;
+	color: $OrangeColor;
+	text-align: center;
+	background-color: #fff;
+}
+
+html.dark .page__theme {
+	background: url("@img/sun.svg") 0 0 / 100% no-repeat;
+}
+html.light .page__theme {
+	background: url("@img/moon.svg") 0 0 / 100% no-repeat;
+}
+
+//
 
 //====================================================================================================
 
 //Burger
-/*
+html.dark .icon-menu {
+	span,
+	&::before,
+	&::after {
+		background-color: $OrangeColor;
+	}
+}
+
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
@@ -18,12 +201,13 @@
 		&::after {
 			content: "";
 			transition: all 0.3s ease 0s;
-			right: 0;
+
 			position: absolute;
 			width: 100%;
 			height: rem(2);
 			background-color: #000;
 		}
+
 		&::before {
 			top: 0;
 		}
@@ -51,4 +235,3 @@
 		}
 	}
 }
-*/
