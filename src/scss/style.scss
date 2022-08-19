@@ -106,6 +106,10 @@ html.dark {
 	// }
 }
 
+html.dark.menu-open .menu__list {
+	box-shadow: 0px 1px 3px #fff7f4;
+}
+
 // светлая тема
 html.light {
 	body {
