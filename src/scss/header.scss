@@ -29,10 +29,6 @@
 	}
 }
 
-html.dark .menu-open {
-	background-color: #fff;
-}
-
 .menu {
 	// .menu__logo
 
@@ -65,12 +61,13 @@ html.dark .menu-open {
 			z-index: -1;
 			transform: translate(0px, -100%);
 			transition: all 0.3s ease 0s;
+			text-align: right;
 			.menu-open & {
 				opacity: 1;
 				transform: translate(0px, 80%);
 
 				box-shadow: 0px 1px 3px $BlackColor;
-				text-align: right;
+
 				padding: 15px;
 			}
 		}
@@ -102,14 +99,9 @@ html.dark .menu-open {
 		}
 		@media (max-width: $mobile) {
 			display: block;
-			padding-bottom: 15px;
-			margin: 0px 0px 0px 0px;
-			&:last-child {
-				padding-bottom: 0;
+			&:not(:last-child) {
+				padding-bottom: 15px;
 			}
-		}
-
-		&:last-child {
 			margin: 0px 0px 0px 0px;
 		}
 	}

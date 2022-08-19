@@ -85,35 +85,39 @@ body {
 .list {
 	margin: 100px 0px 0px 0px;
 }
-html.dark body {
-	color: #fff;
-	background-color: #333;
-}
-html.light body {
-	background-color: #fff;
-	color: #333;
-}
-html.dark header {
-	color: #fff;
-	background-color: $Dark2Color;
-	a {
+
+// темная тема
+html.dark {
+	body {
 		color: #fff;
+		background-color: $Dark1Color;
 	}
-}
-html.dark .icon-menu span {
-	color: $OrangeColor;
-}
-html.light header {
-	background-color: #fff;
-	color: #333;
+	header {
+		background-color: $Dark2Color;
+		a {
+			color: #fff;
+		}
+	}
+	.icon-menu span {
+		color: $OrangeColor;
+	}
+	// .menu-link {
+	// 	background-color: #fff;
+	// }
 }
 
-// @media (prefers-color-scheme: dark) {
-// 	body {
-// 		color: #fff7f4;
-// 		background-color: #373737;
-// 	}
-// }
+// светлая тема
+html.light {
+	body {
+		background-color: #fff;
+		color: $mainColor;
+	}
+	header {
+		background-color: #fff;
+		color: $mainColor;
+	}
+}
+
 // Оболочка wrapper ============================================================================================================================================================================================================================================================================================================================================================================================================================================
 .wrapper {
 	min-height: 100%;
