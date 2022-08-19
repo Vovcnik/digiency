@@ -12,10 +12,10 @@ function windowLoad() {
 	// HTML
 	const htmlBlock = document.documentElement;
 
-	// Отримуємо збережену тему
+	// We get a saved topic
 	const saveUserTheme = localStorage.getItem('user-theme');
 
-	// Робота з системними налаштуваннями
+	// Working with system settings
 	let userTheme;
 	if (window.matchMedia) {
 		userTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -24,7 +24,7 @@ function windowLoad() {
 		!saveUserTheme ? changeTheme() : null;
 	});
 
-	// Зміна теми по кліку
+	// Changing the topic by click
 	const themeButton = document.querySelector('.page__theme');
 	const resetButton = document.querySelector('.page__reset');
 	if (themeButton) {
@@ -40,7 +40,7 @@ function windowLoad() {
 		});
 	}
 
-	// Функція додавання класу теми
+	// The topic class add
 	function setThemeClass() {
 		if (saveUserTheme) {
 			htmlBlock.classList.add(saveUserTheme)
@@ -49,10 +49,10 @@ function windowLoad() {
 			htmlBlock.classList.add(userTheme);
 		}
 	}
-	// Додаємо клас теми
+	// Add the topic class
 	setThemeClass();
 
-	// Функція зміни теми
+	// The subject change function
 	function changeTheme(saveTheme = false) {
 		let currentTheme = htmlBlock.classList.contains('light') ? 'light' : 'dark';
 		let newTheme;

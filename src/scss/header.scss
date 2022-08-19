@@ -42,9 +42,6 @@ html.dark .menu-open {
 		@media (max-width: $mobile) {
 			margin: 0px 0px 0px 0px;
 		}
-		img {
-			max-width: 83px;
-		}
 
 		@media (max-width: $tablet) {
 			margin: 0px 25px 0px 0px;
@@ -151,20 +148,24 @@ html.dark .menu-open {
 	opacity: 1;
 	visibility: visible;
 }
-.page__reset::before {
-	content: "x";
-	position: absolute;
-	top: 0;
-	right: 0;
-	cursor: pointer;
-	width: 10px;
-	height: 10px;
-	font-size: 10px;
-	border-radius: 50%;
-	line-height: 10px;
-	color: $OrangeColor;
-	text-align: center;
-	background-color: #fff;
+// .page__reset::before {
+// 	content: "x";
+// 	position: absolute;
+// 	top: 0;
+// 	right: -6px;
+// 	cursor: pointer;
+// 	width: 11px;
+// 	height: 11px;
+// 	font-size: 10px;
+// 	border-radius: 50%;
+// 	line-height: 10px;
+// 	color: $OrangeColor;
+// 	text-align: center;
+// 	background-color: #fff;
+// }
+html.light .page__reset::before {
+	background-color: rgb(29, 28, 28);
+	color: rgb(255, 251, 251);
 }
 
 html.dark .page__theme {
