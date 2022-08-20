@@ -79,11 +79,7 @@
 	// .menu__item
 
 	&__item {
-	}
-
-	// .menu__link
-
-	&__link {
+		display: inline-block;
 		font-weight: 500;
 		@include adaptiveValue("font-size", 20, 16);
 		&:not(:last-child) {
@@ -93,11 +89,16 @@
 		line-height: math.div(20, 25);
 		transition: all 0.3s ease 0s;
 		white-space: nowrap;
-
 		@media (max-width: $tablet) {
 			font-size: 16px;
 			&:not(:last-child) {
 				margin-right: 19px;
+			}
+		}
+		@media (max-width: $mobile) {
+			font-size: 16px;
+			&:not(:last-child) {
+				margin-right: 0px;
 			}
 		}
 		@media (min-width: $tablet) {
@@ -113,6 +114,11 @@
 			}
 			margin: 0px 0px 0px 0px;
 		}
+	}
+
+	// .menu__link
+
+	&__link {
 	}
 }
 .logo {
