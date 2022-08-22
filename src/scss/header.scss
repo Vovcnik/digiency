@@ -60,21 +60,22 @@
 	// .menu__list
 
 	&__list {
-		overflow: auto;
 		@media (max-width: $mobile) {
 			position: fixed;
 			right: -100%;
-			z-index: -1;
+			z-index: 5;
 			top: 100px;
 			transition: all 0.6s ease 0s;
 			text-align: right;
 			border-top-left-radius: 25px;
 			border-bottom-right-radius: 25px;
+			overflow: auto;
 			.menu-open & {
 				opacity: 1;
 				right: 2%;
 				box-shadow: 0px 1px 3px $BlackColor;
 				padding: 15px;
+				background-color: #ffffff;
 			}
 		}
 	}
@@ -186,7 +187,14 @@ html.light .page__reset::before {
 	background-color: rgb(29, 28, 28);
 	color: rgb(255, 251, 251);
 }
+html.dark.menu-open .menu__list {
+	box-shadow: 0px 1px 3px #fff7f4;
+	background-color: $Dark2Color;
+}
 
+html.dark .header .menu__item:hover {
+	color: $OrangeColor;
+}
 html.dark .page__theme {
 	background: url("@img/sun.svg") 0 0 / 100% no-repeat;
 }

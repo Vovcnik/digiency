@@ -86,7 +86,7 @@
 	color: #ff5300;
 	height: 40px;
 	width: 40px;
-
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
 	&:not(:last-child) {
 		margin: 0px 30px 0px 0px;
 	}
