@@ -5,6 +5,9 @@
 	&__wrapper {
 		background-color: $DarkBackgroundColor;
 		padding: 60px 0px;
+		@media (max-width: $mobile) {
+			padding: 50px 0px;
+		}
 	}
 
 	// .footer__container
@@ -28,6 +31,9 @@
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
+	@media (max-width: $mobile) {
+		display: block;
+	}
 }
 .footer-items {
 	// .footer-items__item
@@ -46,7 +52,7 @@
 	&__text {
 		color: #fff;
 		line-height: math.div(24, 16);
-		margin: 25px 0px 0px 0px;
+		margin: 25px 0px 18px 0px;
 	}
 
 	// .logo-item__socials
@@ -54,6 +60,9 @@
 	&__socials {
 		display: flex;
 		align-items: center;
+	}
+	@media (max-width: 768px) {
+		margin: 0px 0px 50px 0px;
 	}
 }
 
@@ -64,10 +73,28 @@
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-between;
+		flex: 0 1 80%;
+		@media (max-width: $mobile) {
+			flex-wrap: wrap;
+		}
 	}
 }
 .column {
 	flex: 0 1 33.333%;
+	&:not(:last-child) {
+		padding-right: 20px;
+	}
+	@media (max-width: $mobile) {
+		flex: 0 1 30%;
+	}
+	@media (max-width: 663px) {
+		&:not(:first-child) {
+			margin: 40px 0px 0px 0px;
+		}
+	}
+	@media (max-width: 663px) {
+		flex: 0 1 100%;
+	}
 	// .column__title
 
 	&__title {
@@ -85,7 +112,7 @@
 			white-space: nowrap;
 			color: #fff;
 			&:not(:last-child) {
-				margin: 0px 0px 10px 0px;
+				margin: 0px 0px 11px 0px;
 			}
 		}
 	}
@@ -95,12 +122,24 @@
 	&__text {
 		color: #fff;
 		line-height: math.div(24, 16);
-		padding: 0px 50px 0px 0px;
+		max-width: 260px;
 	}
 }
 .email-block {
 	display: flex;
+	justify-content: space-between;
 	border: 1px solid $OrangeColor;
+	margin: 25px 0px 0px 0px;
+	p {
+		color: #7b7b7b;
+		padding: 18px;
+		@media (max-width: 991px) {
+			padding: 12px 5px;
+		}
+		@media (max-width: 768px) {
+			padding: 18px;
+		}
+	}
 }
 
 //====================================================================================================
