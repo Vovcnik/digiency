@@ -97,6 +97,9 @@ html.dark {
 		a {
 			color: #fff;
 		}
+		.header ._header-scroll {
+			background-color: $Dark2Color;
+		}
 	}
 	.icon-menu span {
 		color: $OrangeColor;

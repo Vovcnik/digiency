@@ -12,9 +12,11 @@
 	&._header-scroll {
 		position: fixed;
 		top: -200%;
+
+		z-index: 99;
 	}
 	&._header-show {
-		transition: all 0.3s ease 0s;
+		transition: all 0.9s ease 0s;
 		top: 0;
 	}
 	&__container {
@@ -58,6 +60,7 @@
 	// .menu__list
 
 	&__list {
+		overflow: auto;
 		@media (max-width: $mobile) {
 			position: fixed;
 			right: -100%;
