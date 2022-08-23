@@ -13,6 +13,7 @@
 .digital-agency {
 	display: flex;
 	align-items: flex-start;
+	justify-content: space-between;
 	@media (max-width: $mobile) {
 		flex-wrap: wrap-reverse;
 		justify-content: center;
@@ -47,6 +48,7 @@
 		position: absolute;
 		right: 0;
 		top: 30%;
+
 		@media (max-width: $tablet) {
 			top: 8%;
 		}
