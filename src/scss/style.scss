@@ -28,6 +28,7 @@ $OrangeColor: #ff5300;
 $OrangeBackgroundColor: #fff7f4;
 $BlackColor: #373737;
 $DarkBackgroundColor: #373737;
+$DarkColor: #18191a;
 $Dark1Color: #242526;
 $Dark2Color: #3a3b3c;
 $GrayColor: #7b7b7b;
@@ -88,6 +89,9 @@ body {
 
 // темная тема
 html.dark {
+	._title {
+		color: #faf6f6;
+	}
 	body {
 		color: #fff;
 		background-color: $Dark1Color;
@@ -109,9 +113,12 @@ html.dark {
 	.icon-menu span {
 		color: $OrangeColor;
 	}
-	// .menu-link {
-	// 	background-color: #fff;
-	// }
+	.making__column {
+		background: #242526;
+	}
+	.making__wrapper {
+		background: #18191a;
+	}
 }
 
 // светлая тема
