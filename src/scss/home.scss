@@ -117,7 +117,7 @@
 			margin: 30px auto 0px auto;
 		}
 		.link {
-			box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+			box-shadow: 0px 1px 10px rgba(0, 0, 0, 45%);
 			border-radius: 5px;
 			display: flex;
 			flex-direction: column;
@@ -134,4 +134,70 @@
 .socials {
 }
 .icon-footer {
+}
+
+// making  ========================================================================================================================================================
+.making {
+	// .making__container
+	&__wrapper {
+		background: #fff;
+		padding: 120px 0px 120px 0px;
+	}
+
+	&__container {
+	}
+
+	// .making__inner
+
+	&__inner {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	// .making__item
+
+	&__item {
+	}
+
+	// .making__item--img
+
+	&__item--img {
+	}
+
+	// .making__item--info
+
+	&__item--info {
+	}
+
+	// .making__title
+
+	&__title {
+	}
+
+	// .making__text
+
+	&__text {
+	}
+
+	// .making__btn
+
+	&__btn {
+	}
+
+	// .making__column
+
+	&__column {
+	}
+}
+
+.making-items {
+}
+.column-making {
+	// .column-making__text
+
+	&__text {
+	}
+}
+.icon-making {
 }
