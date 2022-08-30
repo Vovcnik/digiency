@@ -386,6 +386,7 @@
 
 	&__item--text {
 		flex: 0 1 570px;
+
 		@media (min-width: $mobile) {
 			margin: 0px 30px 0px 0px;
 		}
@@ -438,30 +439,41 @@
 }
 .achievements-items {
 	display: flex;
-	flex-wrap: wrap;
+
 	flex: 0 1 570px;
 	justify-content: flex-end;
 	align-items: center;
 	@media (max-width: $mobile) {
 		flex: 0 1 100%;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 }
 .achievements-item {
 	flex: 0 1 270px;
+	margin: 0px 30px 30px 0px;
+	&:not(:last-child) {
+	}
 	@media (max-width: $tablet) {
 		flex: 0 1 162px;
 	}
+	@media (min-width: $mobile) {
+		&:nth-child(2) {
+			margin: 30px 0px 0px 0px;
+		}
+	}
+
 	&:not(:last-child) {
-		margin-right: 30px;
+		margin-bottom: 30px;
 	}
 	@media (max-width: $mobile) {
 		flex: 0 1 100%;
-		margin-bottom: 30px;
+
+		margin: 0px 0px 30px 0px;
 	}
 
 	@media (min-width: $mobile) {
 		&:nth-child(2) {
-			margin-top: 30px;
 		}
 	}
 
@@ -474,6 +486,11 @@
 		@media (max-width: $tablet) {
 			font-size: 25px;
 			font-weight: 500;
+		}
+		@media (max-width: 375px) {
+			font-size: 48px;
+
+			font-weight: 700;
 		}
 	}
 	&__column {
