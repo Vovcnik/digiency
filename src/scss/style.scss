@@ -115,9 +115,27 @@ html.dark {
 	}
 	.making__column {
 		background: #242526;
+		box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.1);
 	}
 	.making__wrapper {
 		background: #18191a;
+	}
+	.project__wrapper {
+		background: #242526;
+	}
+	.achievements-item__column {
+		background-color: $Dark2Color;
+		box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.1);
+	}
+	.achievements-item__title {
+		color: #fff;
+	}
+	.column-title {
+		span {
+			font-size: 48px;
+			color: #ffffff;
+			font-weight: 700;
+		}
 	}
 }
 
