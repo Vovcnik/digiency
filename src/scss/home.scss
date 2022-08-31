@@ -326,8 +326,10 @@
 		justify-content: center;
 		flex-direction: column;
 		box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+
 		flex: 0 1 25%;
 		padding: 25px 33px;
+
 		@media (max-width: $tablet) {
 			padding: 12px 18px;
 		}
@@ -452,14 +454,16 @@
 .achievements-item {
 	flex: 0 1 270px;
 	margin: 0px 30px 30px 0px;
+
 	&:not(:last-child) {
 	}
 	@media (max-width: $tablet) {
 		flex: 0 1 162px;
 	}
 	@media (min-width: $mobile) {
-		&:nth-child(2) {
-			margin: 30px 0px 0px 0px;
+		&._watcher-view:nth-child(2) {
+			transform: translate(0px, 30px);
+			transition: transform 0.8s ease 0s;
 		}
 	}
 
@@ -483,6 +487,7 @@
 		font-size: 48px;
 		color: #373737;
 		font-weight: 700;
+
 		@media (max-width: $tablet) {
 			font-size: 25px;
 			font-weight: 500;
@@ -501,6 +506,12 @@
 		align-items: center;
 		padding: 42px 8px;
 		box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+		transition: box-shadow 0.3s ease 0s;
+		@media (min-width: $tablet) {
+			&:hover {
+				box-shadow: 0px 1px 10px rgba(0, 0, 0, 0);
+			}
+		}
 		background-color: #fff;
 		@media (max-width: $tablet) {
 			height: 150px;
@@ -509,5 +520,14 @@
 	// .achievements-item__text
 
 	&__text {
+	}
+}
+.column-title {
+	display: flex;
+	align-items: center;
+	span {
+		font-size: 48px;
+		color: #373737;
+		font-weight: 700;
 	}
 }
