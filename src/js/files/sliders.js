@@ -27,9 +27,9 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Перечень слайдеров
 	// Проверяем, есть ли слайдер на стронице
-	if (document.querySelector('.swiper')) { // Указываем скласс нужного слайдера
+	if (document.querySelector('.swiper-people')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.swiper', { // Указываем скласс нужного слайдера
+		new Swiper('.swiper-people', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
 			modules: [Navigation],
@@ -39,6 +39,7 @@ function initSliders() {
 			spaceBetween: 0,
 			autoHeight: true,
 			speed: 800,
+
 
 			//touchRatio: 0,
 			//simulateTouch: false,
@@ -56,12 +57,13 @@ function initSliders() {
 			*/
 
 			// Пагинация
-			/*
+
 			pagination: {
 				el: '.swiper-pagination',
+
 				clickable: true,
 			},
-			*/
+
 
 			// Скроллбар
 			/*
@@ -78,27 +80,39 @@ function initSliders() {
 			},
 
 			// Брейкпоинты
-			/*
+
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
 					spaceBetween: 0,
 					autoHeight: true,
+					centeredSlides: true,
 				},
-				768: {
-					slidesPerView: 2,
+				450: {
+					slidesPerView: 1.5,
 					spaceBetween: 20,
+					autoHeight: true,
+
+				},
+				600: {
+					slidesPerView: 2.2,
+					spaceBetween: 20,
+
+				},
+				750: {
+					slidesPerView: 2.7,
+					spaceBetween: 30,
 				},
 				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
+					slidesPerView: 3.2,
+					spaceBetween: 30,
 				},
 				1268: {
 					slidesPerView: 4,
 					spaceBetween: 30,
 				},
 			},
-			*/
+
 			// События
 			on: {
 

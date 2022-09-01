@@ -13,6 +13,7 @@
 .vidget-sicial {
 	position: fixed;
 	right: 0;
+	z-index: 2;
 }
 .digital-agency {
 	display: flex;
@@ -529,5 +530,59 @@
 		font-size: 48px;
 		color: #373737;
 		font-weight: 700;
+		@media (max-width: $tablet) {
+			font-size: 25px;
+			font-weight: 500;
+		}
+		@media (max-width: 375px) {
+			font-size: 48px;
+			font-weight: 700;
+		}
 	}
+}
+
+.people {
+	// .people__wrapper
+
+	&__wrapper {
+	}
+
+	// .people__container
+
+	&__container {
+	}
+}
+
+.people-header {
+	// .people-header__subtitle
+
+	&__subtitle {
+	}
+
+	// .people-header__title
+
+	&__title {
+	}
+}
+.swiper {
+}
+.swiper-people {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+	// .swiper-slide__footer
+
+	&__footer {
+	}
+}
+.footer-slaider {
+	// .footer-slaider__title
+
+	&__title {
+	}
+}
+.footer-text {
+}
+.swiper-pagination {
 }
