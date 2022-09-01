@@ -180,4 +180,61 @@
 	}
 }
 
+.footer-footer {
+	// .footer-footer__wrapper
+
+	&__wrapper {
+		background-color: #ff5300;
+		padding: 18px 0px;
+	}
+
+	// .footer-footer__body
+
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-left: 35px;
+		@media (max-width: $mobile) {
+			justify-content: center;
+		}
+		._icon-copyright-fill {
+			color: #fff;
+		}
+		._icon-copyright-fill::before {
+			top: 1px;
+			left: -35px;
+			position: absolute;
+			font-size: 22px;
+		}
+		._icon-arrow-up-fill::before {
+			color: #fff;
+			font-size: 36px;
+			opacity: 0;
+			transform: translate(0px, 30px);
+			@media (max-width: $mobile) {
+				display: none;
+			}
+		}
+	}
+	._watcher-view ._icon-arrow-up-fill::before {
+		transition: all 0.9s ease 0s;
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
+	// .footer-footer__text
+
+	&__text {
+		font-size: 16px;
+		color: #fff;
+		position: relative;
+	}
+}
+.footer {
+	// .footer__container
+
+	&__container {
+	}
+}
+
 //====================================================================================================
