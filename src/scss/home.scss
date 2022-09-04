@@ -526,19 +526,6 @@
 .column-title {
 	display: flex;
 	align-items: center;
-	span {
-		font-size: 48px;
-		color: #373737;
-		font-weight: 700;
-		@media (max-width: $tablet) {
-			font-size: 25px;
-			font-weight: 500;
-		}
-		@media (max-width: 375px) {
-			font-size: 48px;
-			font-weight: 700;
-		}
-	}
 }
 
 .people {
