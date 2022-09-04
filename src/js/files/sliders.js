@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, {Navigation, Pagination, } from 'swiper';
+import Swiper, {Navigation, Pagination } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -19,7 +19,7 @@ EffectFade, Lazy, Manipulation
 // Базовые стили
 import "../../scss/base/swiper.scss";
 // Полный набор стилей из scss/libs/swiper.scss
-// import "../../scss/libs/swiper.scss";
+ import "../../scss/libs/swiper.scss";
 // Полный набор стилей из node_modules
  import 'swiper/css';
 
@@ -32,10 +32,10 @@ function initSliders() {
 		new Swiper('.swiper-people', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Pagination],
+			modules: [Navigation, Pagination ],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
+			slidesPerView: 4,
 			spaceBetween: 0,
 			autoHeight: true,
 			speed: 800,
@@ -60,8 +60,8 @@ function initSliders() {
 
 			pagination: {
 				el: '.swiper-pagination',
-
-				clickable: true,
+				dynamicBullets: true,
+				
 			},
 
 

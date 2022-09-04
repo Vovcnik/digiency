@@ -529,11 +529,12 @@
 }
 
 .people {
+	position: relative;
 	// .people__wrapper
 
 	&__wrapper {
-		@include adaptiveValue("padding-top", 120, 50);
-		@include adaptiveValue("padding-bottom", 120, 50);
+		@include adaptiveValue("padding-top", 100, 50);
+		@include adaptiveValue("padding-bottom", 100, 50);
 	}
 
 	// .people__container
@@ -557,21 +558,29 @@
 	}
 	.swiper {
 		height: 100%;
-		padding: 0px 20px 30px 10px;
+		padding: 0px 20px 80px 10px;
 		@media (max-width: $mobile) {
-			padding: 0px 0px 30px 0px;
+			padding: 0px 0px 80px 0px;
 		}
 	}
 	.swiper-wrapper {
 	}
 	.swiper-pagination-bullet {
-		background-color: #000;
+		background-color: #f37b3f;
 		width: 10px;
 		height: 10px;
 	}
+	.swiper-horizontal > .swiper-pagination-bullets,
+	.swiper-pagination-bullets.swiper-pagination-horizontal,
+	.swiper-pagination-custom,
+	.swiper-pagination-fraction {
+		bottom: 0;
+	}
 	.swiper-pagination {
-		bottom: 10px;
-		left: 0;
+		position: absolute;
+		bottom: 0px;
+		display: flex;
+		justify-content: center;
 		width: 100%;
 	}
 }
