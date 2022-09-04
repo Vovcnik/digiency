@@ -564,6 +564,16 @@
 	}
 	.swiper-wrapper {
 	}
+	.swiper-pagination-bullet {
+		background-color: #000;
+		width: 10px;
+		height: 10px;
+	}
+	.swiper-pagination {
+		bottom: 10px;
+		left: 0;
+		width: 100%;
+	}
 }
 
 .people-header {
@@ -596,6 +606,4 @@
 	}
 }
 .footer-text {
-}
-.swiper-pagination {
 }
