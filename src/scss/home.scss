@@ -13,6 +13,7 @@
 .vidget-sicial {
 	position: fixed;
 	right: 0;
+	z-index: 2;
 }
 .digital-agency {
 	display: flex;
@@ -301,7 +302,7 @@
 			padding: 0px 15px;
 		}
 		@media (max-width: $mobile) {
-			flex: 0 1 80%;
+			flex: 0 1 100%;
 			&:not(:last-child) {
 				margin: 0px 0px 25px 0px;
 			}
@@ -326,8 +327,10 @@
 		justify-content: center;
 		flex-direction: column;
 		box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+
 		flex: 0 1 25%;
 		padding: 25px 33px;
+
 		@media (max-width: $tablet) {
 			padding: 12px 18px;
 		}
@@ -372,6 +375,8 @@
 		justify-content: space-between;
 		@media (max-width: $mobile) {
 			flex-wrap: wrap;
+			justify-content: center;
+			text-align: center;
 		}
 	}
 
@@ -384,7 +389,10 @@
 
 	&__item--text {
 		flex: 0 1 570px;
-		margin: 0px 30px 0px 0px;
+
+		@media (min-width: $mobile) {
+			margin: 0px 30px 0px 0px;
+		}
 	}
 
 	// .project__item--achievements
@@ -392,8 +400,11 @@
 	&__item--achievements {
 		display: flex;
 		align-items: center;
-		justify-content: flex-end;
+
 		flex-wrap: wrap;
+		@media (max-width: $mobile) {
+			justify-content: center;
+		}
 	}
 }
 
@@ -420,26 +431,54 @@
 
 	&__btn {
 		margin: 50px 0px 0px 0px;
+		@media (max-width: $tablet) {
+			margin: 25px 0px 55px 0px;
+		}
+		@media (max-width: $mobile) {
+			display: flex;
+			justify-content: center;
+		}
 	}
 }
 .achievements-items {
 	display: flex;
-	flex: 0 1 570px;
-	justify-content: space-between;
-	align-items: center;
-}
-.achievements-item {
-	flex: 0 1 280px;
 
+	flex: 0 1 570px;
+	justify-content: flex-end;
+	align-items: center;
 	@media (max-width: $mobile) {
 		flex: 0 1 100%;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
+}
+.achievements-item {
+	flex: 0 1 270px;
+	margin: 0px 30px 30px 0px;
+
 	&:not(:last-child) {
-		margin: 0px 30px 0px 0px;
+	}
+	@media (max-width: $tablet) {
+		flex: 0 1 162px;
 	}
 	@media (min-width: $mobile) {
+		&._watcher-view:nth-child(2) {
+			transform: translate(0px, 30px);
+			transition: transform 0.8s ease 0s;
+		}
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 30px;
+	}
+	@media (max-width: $mobile) {
+		flex: 0 1 100%;
+
+		margin: 0px 0px 30px 0px;
+	}
+
+	@media (min-width: $mobile) {
 		&:nth-child(2) {
-			margin: 30px 0px 0px 0px;
 		}
 	}
 
@@ -449,6 +488,16 @@
 		font-size: 48px;
 		color: #373737;
 		font-weight: 700;
+
+		@media (max-width: $tablet) {
+			font-size: 25px;
+			font-weight: 500;
+		}
+		@media (max-width: 375px) {
+			font-size: 48px;
+
+			font-weight: 700;
+		}
 	}
 	&__column {
 		height: 250px;
@@ -456,10 +505,16 @@
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
-		padding: 42px 15px;
+		padding: 42px 8px;
 		box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+		transition: box-shadow 0.3s ease 0s;
+		@media (min-width: $tablet) {
+			&:hover {
+				box-shadow: 0px 1px 10px rgba(0, 0, 0, 0);
+			}
+		}
 		background-color: #fff;
-		@media (max-width: $mobile) {
+		@media (max-width: $tablet) {
 			height: 150px;
 		}
 	}
@@ -467,4 +522,93 @@
 
 	&__text {
 	}
+}
+.column-title {
+	display: flex;
+	align-items: center;
+	span {
+		font-size: 48px;
+		color: #373737;
+		font-weight: 700;
+		@media (max-width: $tablet) {
+			font-size: 25px;
+			font-weight: 500;
+		}
+		@media (max-width: 375px) {
+			font-size: 48px;
+			font-weight: 700;
+		}
+	}
+}
+
+.people {
+	// .people__wrapper
+
+	&__wrapper {
+		@include adaptiveValue("padding-top", 120, 50);
+		@include adaptiveValue("padding-bottom", 120, 50);
+	}
+
+	// .people__container
+
+	&__container {
+	}
+	.swiper-slide {
+		box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+		margin-top: 25px;
+
+		img {
+			object-fit: cover;
+			object-position: center;
+			width: 100%;
+			height: 100%;
+		}
+		// .swiper-slide__footer
+
+		&__footer {
+		}
+	}
+	.swiper {
+		height: 100%;
+		padding: 0px 20px 30px 10px;
+		@media (max-width: $mobile) {
+			padding: 0px 0px 30px 0px;
+		}
+	}
+	.swiper-wrapper {
+	}
+}
+
+.people-header {
+	text-align: center;
+	// .people-header__subtitle
+
+	&__subtitle {
+		margin: 0px 0px 25px 0px;
+	}
+
+	// .people-header__title
+
+	&__title {
+	}
+}
+
+.swiper-people {
+}
+
+.footer-slaider {
+	text-align: center;
+	padding: 18px 0;
+
+	// .footer-slaider__title
+
+	&__title {
+		font-weight: 500;
+		font-size: 20px;
+		color: #000;
+	}
+}
+.footer-text {
+}
+.swiper-pagination {
 }
