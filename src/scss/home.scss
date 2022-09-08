@@ -598,7 +598,25 @@
 	&__title {
 	}
 }
-
+.swiper-slide:hover .piople-social .vidget-sicial {
+	opacity: 1;
+}
+.piople-social {
+	.vidget-sicial {
+		top: 29px;
+		opacity: 0;
+		transition: all 0.3s ease 0s;
+	}
+}
+.piople-social__social {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	.icon-footer:not(:last-child) {
+		margin: 0px 0px 10px 0px;
+	}
+}
 .swiper-people {
 }
 
@@ -615,4 +633,85 @@
 	}
 }
 .footer-text {
+}
+
+.projects {
+	// .projects__header
+
+	&__header {
+		text-align: center;
+		margin: 120px 0px 25px 0px;
+	}
+}
+.header-projects {
+	// .header-projects__list
+
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 610px;
+		margin: 0px auto 55px auto;
+		li {
+			transition: all 0.3s ease 0s;
+			cursor: pointer;
+		}
+		li:hover {
+			color: #f37b3f;
+		}
+	}
+}
+.projects-header {
+	// .projects-header__subtitle
+
+	&__subtitle {
+		margin: 0px 0px 25px 0px;
+	}
+
+	// .projects-header__title
+
+	&__title {
+	}
+}
+
+.projects-development {
+	// .projects-development__items
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin: 0px -15px;
+	}
+
+	// .projects-development__item
+
+	&__item {
+		padding: 0px 15px;
+		flex: 0 1 33.333%;
+
+		position: relative;
+	}
+
+	// .projects-development__column
+
+	&__column {
+	}
+
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+.column-development {
+	&__item {
+		box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+		margin: 0px 0px 30px 0px;
+	}
+}
+.hide {
+	display: none; /* скрывает элемент */
 }
