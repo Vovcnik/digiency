@@ -712,6 +712,55 @@
 		margin: 0px 0px 30px 0px;
 	}
 }
-.hide {
-	display: none; /* скрывает элемент */
+.great {
+	// .great__container
+
+	&__container {
+	}
+}
+.great-wrapper {
+	background-color: $OrangeBackgroundColor;
+	padding: 60px 0px;
+}
+
+.great-header {
+	// .great-header__subtitle
+
+	&__subtitle {
+	}
+
+	// .great-header__title
+
+	&__title {
+	}
+}
+.header-subtitle {
+}
+.swiper {
+}
+.swiper-great {
+	// .swiper-great__title
+
+	&__title {
+	}
+
+	// .swiper-great__subtitle
+
+	&__subtitle {
+	}
+
+	// .swiper-great__text
+
+	&__text {
+	}
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+.swiper-scrollbar {
 }

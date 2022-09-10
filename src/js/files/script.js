@@ -74,28 +74,5 @@ function windowLoad() {
 
 }
 
-buttons.forEach((button) => {
-	button.addEventListener('click', () => {
-		const currentCategory = button.dataset.filter
-		// Здесь сработает функция
-		filter(currentCategory, cards)
-	});
-});
 
-function filter(category, items) {
-	items.forEach((item) => {
-		// проверка на соответствие категории
-		const isItemFiltered = !item.classList.contains(category)
-		// Заведем переменную для показа всех карточек в категории All
-		const isShowAll = category.toLowerCase() === 'all'
-		// Если карточка не содержит данную категорию
-		if (isItemFiltered && !isShowAll) {
-			// Добавлять класс hide
-			item.classList.add('hide')
-			// В противном случае, удалять класс hide
-		} else {
-			item.classList.remove('hide')
-		}
-	})
-}
 
