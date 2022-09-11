@@ -724,6 +724,8 @@
 }
 
 .great-header {
+	margin: 0px 0px 50px 0px;
+
 	// .great-header__subtitle
 
 	&__subtitle {
@@ -735,13 +737,27 @@
 	}
 }
 .header-subtitle {
+	margin-bottom: 25px;
 }
 .swiper {
 }
 .swiper-great {
 	// .swiper-great__title
 
+	.swiper-slide {
+		background-color: #f37b3f;
+		position: relative;
+		text-align: left;
+		color: #fff;
+		img {
+			position: absolute;
+			left: -20px;
+			top: 30%;
+		}
+	}
+
 	&__title {
+		color: #fff;
 	}
 
 	// .swiper-great__subtitle
@@ -756,8 +772,7 @@
 }
 .swiper-wrapper {
 }
-.swiper-slide {
-}
+
 .swiper-button-prev {
 }
 .swiper-button-next {

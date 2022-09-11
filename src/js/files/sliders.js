@@ -189,16 +189,13 @@ function initSliders() {
 
 				},
 				750: {
-					slidesPerView: 3,
-					spaceBetween: 25,
+					slidesPerView: 2,
+					spaceBetween: 80,
 				},
-				992: {
-					slidesPerView: 3.2,
-					spaceBetween: 30,
-				},
+				
 				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
+					slidesPerView: 2,
+					spaceBetween: 100,
 				},
 			},
 
