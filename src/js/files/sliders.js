@@ -121,7 +121,7 @@ function initSliders() {
 		new Swiper('.swiper-great', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation,],
+			modules: [Navigation, Pagination],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 4,
@@ -154,12 +154,12 @@ function initSliders() {
 
 
 			// Скроллбар
-			/*
+			
 			scrollbar: {
 				el: '.swiper-scrollbar',
-				draggable: true,
+				type: "progressbar",
 			},
-			*/
+			
 
 			// Кнопки "влево/вправо"
 			navigation: {
@@ -182,15 +182,7 @@ function initSliders() {
 					autoHeight: true,
 
 				},
-				600: {
-					slidesPerView: 2.2,
-					spaceBetween: 20,
-
-				},
-				750: {
-					slidesPerView: 2,
-					spaceBetween: 80,
-				},
+				
 				
 				1268: {
 					slidesPerView: 2,
