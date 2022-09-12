@@ -52,7 +52,7 @@
 		flex-direction: column;
 		position: absolute;
 		right: 0;
-		top: 30%;
+		top: -15vh;
 
 		@media (max-width: $tablet) {
 			top: 8%;
@@ -718,6 +718,7 @@
 .great {
 	.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 		background: #f37b3f;
+		height: 98%;
 		border-radius: 7.5px;
 		@media (max-width: $mobile) {
 			display: none;
