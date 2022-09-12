@@ -52,7 +52,7 @@
 		flex-direction: column;
 		position: absolute;
 		right: 0;
-		top: -15vh;
+		top: 2vh;
 
 		@media (max-width: $tablet) {
 			top: 8%;
@@ -541,6 +541,26 @@
 
 	&__container {
 	}
+	@media (min-width: $tablet) {
+		.swiper-backface-hidden .swiper-slide {
+			transform: scale(0);
+
+			&._watcher-view {
+				@for $var from 1 to 5 {
+					$delay: $var * 0.2;
+					&:nth-child(#{$var}) {
+						@if $var==1 {
+							transition: transform 0.8s ease 0s;
+						} @else {
+							transition: transform 0.9s ease #{$delay + s};
+						}
+					}
+				}
+				transform: scale(1);
+			}
+		}
+	}
+
 	.swiper-slide {
 		box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
 		margin-top: 25px;
@@ -557,14 +577,12 @@
 		}
 	}
 	.swiper {
-		height: 100%;
 		padding: 0px 20px 80px 10px;
 		@media (max-width: $mobile) {
 			padding: 0px 0px 80px 0px;
 		}
 	}
-	.swiper-wrapper {
-	}
+
 	.swiper-pagination-bullet {
 		background-color: #f37b3f;
 		width: 10px;
@@ -675,6 +693,42 @@
 	}
 }
 
+.Graphic-Design {
+	position: relative;
+	._icon-search-line {
+		@include adaptiveValue("font-size", 40, 25);
+		color: #fff;
+	}
+	// .Graphic-Design__work
+
+	&__work {
+		position: absolute;
+		top: 0;
+		bottom: -32%;
+		left: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	// .Graphic-Design__title
+
+	&__title {
+		font-weight: 500;
+		@include adaptiveValue("font-size", 25, 20);
+		margin: 25px 0px 18px 0px;
+		color: #fff;
+	}
+
+	// .Graphic-Design__subtitle
+
+	&__subtitle {
+		color: #fff;
+	}
+}
+
 .projects-development {
 	// .projects-development__items
 
@@ -684,6 +738,9 @@
 		justify-content: space-between;
 		align-items: flex-start;
 		margin: 0px -15px;
+		@media (max-width: $mobile) {
+			justify-content: center;
+		}
 	}
 
 	// .projects-development__item
@@ -693,7 +750,7 @@
 		flex: 0 1 33.333%;
 		position: relative;
 		@media (max-width: $mobile) {
-			flex: 0 1 100%;
+			flex: 0 1 70%;
 		}
 	}
 
@@ -792,8 +849,11 @@
 			position: absolute;
 			left: -35px;
 			top: 25px;
-			width: 80px;
-			height: 80px;
+			rotate: 90deg;
+			transition: rotate 0.9s ease 0s;
+			&._watcher-view {
+				rotate: 0deg;
+			}
 		}
 	}
 
@@ -803,6 +863,11 @@
 		font-weight: 500;
 		line-height: math.div(25, 31);
 		margin: 0px 0px 7px 0px;
+		opacity: 0;
+		transition: opacity 0.3s ease 0s;
+		&._watcher-view {
+			opacity: 1;
+		}
 		@media (max-width: $mobile) {
 			padding: 0px 0px 00px 20px;
 		}
@@ -811,6 +876,11 @@
 	// .swiper-great__subtitle
 
 	&__subtitle {
+		opacity: 0;
+		transition: opacity 0.3s ease 0.3s;
+		&._watcher-view {
+			opacity: 1;
+		}
 		@media (max-width: $mobile) {
 			padding: 0px 0px 00px 20px;
 		}

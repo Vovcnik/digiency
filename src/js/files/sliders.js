@@ -150,16 +150,16 @@ function initSliders() {
 			pagination: {
 				el: ".swiper-pagination",
 				type: "progressbar",
-			 },
+			},
 
 
 			// Скроллбар
-			
+
 			scrollbar: {
 				el: '.swiper-scrollbar',
 				type: "progressbar",
 			},
-			
+
 
 			// Кнопки "влево/вправо"
 			navigation: {
@@ -173,17 +173,17 @@ function initSliders() {
 				320: {
 					slidesPerView: 1.2,
 					spaceBetween: 0,
-					
+
 					centeredSlides: true,
 				},
 				450: {
 					slidesPerView: 1.5,
 					spaceBetween: 20,
-					
+
 
 				},
-				
-				
+
+
 				1268: {
 					slidesPerView: 2,
 					spaceBetween: 150,
