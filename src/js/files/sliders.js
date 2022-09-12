@@ -148,10 +148,9 @@ function initSliders() {
 			// Пагинация
 
 			pagination: {
-				el: '.swiper-pagination',
-				dynamicBullets: true,
-
-			},
+				el: ".swiper-pagination",
+				type: "progressbar",
+			 },
 
 
 			// Скроллбар
@@ -195,7 +194,7 @@ function initSliders() {
 				
 				1268: {
 					slidesPerView: 2,
-					spaceBetween: 100,
+					spaceBetween: 150,
 				},
 			},
 
