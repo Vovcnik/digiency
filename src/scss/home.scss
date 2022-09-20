@@ -692,6 +692,10 @@
 	&__title {
 	}
 }
+.hides {
+	display: none;
+	transition: all 0.3s ease 0s;
+}
 
 .Graphic-Design {
 	position: relative;

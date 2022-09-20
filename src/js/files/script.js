@@ -76,3 +76,31 @@ function windowLoad() {
 
 
 
+function app() {
+	const buttons = document.querySelectorAll('.button');
+	const box = document.querySelectorAll('.box');
+
+	function filter(category, items) {
+		items.forEach((item) => {
+			const isItemFilter = !item.classList.contains(category);
+			const isSwoAll = category.toLowerCase() === "all"
+			if (isItemFilter && !isSwoAll) {
+				item.classList.add('hides')
+			} else {
+				item.classList.remove('hides')
+			}
+		})
+	}
+
+	buttons.forEach((button) => {
+		button.addEventListener('click', () => {
+			const currentCategorry = button.dataset.filter
+			filter(currentCategorry, box);
+
+		})
+	})
+}
+
+app();
+
+
