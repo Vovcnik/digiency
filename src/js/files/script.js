@@ -85,9 +85,10 @@ function app() {
 			const isItemFilter = !item.classList.contains(category);
 			const isSwoAll = category.toLowerCase() === "all"
 			if (isItemFilter && !isSwoAll) {
-				item.classList.add('hides')
+				item.classList.add('anime')
 			} else {
 				item.classList.remove('hides')
+				item.classList.remove('anime')
 			}
 		})
 	}
@@ -97,6 +98,14 @@ function app() {
 			const currentCategorry = button.dataset.filter
 			filter(currentCategorry, box);
 
+		})
+
+		box.forEach((box) => {
+			box.ontransitionend = function () {
+				if (box.classList.contains("anime")) {
+					box.classList.add("hides")
+				}
+			}
 		})
 	})
 }

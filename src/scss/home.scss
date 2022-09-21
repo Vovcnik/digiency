@@ -693,7 +693,28 @@
 	}
 }
 .hides {
-	display: none;
+	animation: hides 0.5s forwards;
+}
+@keyframes hides {
+	0% {
+		visibility: visible;
+		height: 200px;
+	}
+	100% {
+		visibility: hidden;
+		margin: 0;
+		height: 0;
+		font-size: 0;
+		max-width: 0;
+		width: 0;
+	}
+}
+.anime {
+	transform: scale(0);
+	opacity: 0;
+}
+
+.box {
 	transition: all 0.3s ease 0s;
 }
 

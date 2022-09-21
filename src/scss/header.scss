@@ -148,6 +148,7 @@
 	height: 30px;
 	flex: 0 0 30px;
 	cursor: pointer;
+	transition: all 0.3s ease 0s;
 	@media (max-width: $tablet) {
 		width: 20px;
 		height: 20px;
@@ -163,10 +164,13 @@
 .page__reset {
 	opacity: 0;
 	visibility: hidden;
+	transform: scale(0);
+	transform: rotate3d(90deg);
 }
 .page__reset.active {
 	opacity: 1;
 	visibility: visible;
+	transform: scale(1);
 }
 // .page__reset::before {
 // 	content: "x";
@@ -197,6 +201,7 @@ html.dark .header .menu__item:hover {
 }
 html.dark .page__theme {
 	background: url("@img/sun.svg") 0 0 / 100% no-repeat;
+	transition: all 0.3s ease 0s;
 }
 html.light .page__theme {
 	background: url("@img/moon.svg") 0 0 / 100% no-repeat;
