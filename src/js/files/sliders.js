@@ -27,7 +27,7 @@ import 'swiper/css';
 function initSliders() {
 	// Перечень слайдеров
 	// Проверяем, есть ли слайдер на стронице
-	if (document.querySelector('.swiper-people', "swiper-great")) { // Указываем скласс нужного слайдера
+	if (document.querySelector('.swiper-people', "swiper-great", "swiper-blog")) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
 		new Swiper('.swiper-people', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
@@ -163,8 +163,8 @@ function initSliders() {
 
 			// Кнопки "влево/вправо"
 			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-next',
+				nextEl: '.swiper-button-prev',
 			},
 
 			// Брейкпоинты
@@ -179,7 +179,7 @@ function initSliders() {
 				450: {
 					slidesPerView: 1.5,
 					spaceBetween: 20,
-
+					autoHeight: true
 
 				},
 
@@ -187,6 +187,82 @@ function initSliders() {
 				1268: {
 					slidesPerView: 2,
 					spaceBetween: 150,
+					autoHeight: true
+
+				},
+			},
+
+			// События
+			on: {
+
+			}
+		});
+		new Swiper('.swiper-blog', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, Pagination],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 4,
+			spaceBetween: 0,
+			autoHeight: true,
+			speed: 800,
+
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Эффекты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+			// Пагинация
+
+			pagination: {
+				el: ".swiper-pagination",
+				type: "progressbar",
+			},
+
+
+			// Скроллбар
+
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				type: "progressbar",
+			},
+
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.swiper-button-next',
+				nextEl: '.swiper-button-prev',
+			},
+
+			// Брейкпоинты
+
+			breakpoints: {
+				320: {
+					slidesPerView: 1.1,
+					spaceBetween: 10,
+
+					centeredSlides: true,
+				},
+				500: {
+					slidesPerView: 1.5,
+					spaceBetween: 20,
+
+				},
+				1268: {
+					slidesPerView: 2,
+					spaceBetween: 30,
 					autoHeight: true,
 				},
 			},
