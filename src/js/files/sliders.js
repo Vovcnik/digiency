@@ -173,7 +173,7 @@ function initSliders() {
 				320: {
 					slidesPerView: 1.2,
 					spaceBetween: 0,
-
+					autoHeight: true,
 					centeredSlides: true,
 				},
 				450: {
@@ -252,13 +252,13 @@ function initSliders() {
 				320: {
 					slidesPerView: 1.1,
 					spaceBetween: 10,
-
+					autoHeight: true,
 					centeredSlides: true,
 				},
 				500: {
 					slidesPerView: 1.5,
 					spaceBetween: 20,
-
+					autoHeight: true,
 				},
 				1268: {
 					slidesPerView: 2,
