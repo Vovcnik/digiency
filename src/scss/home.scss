@@ -863,6 +863,7 @@
 }
 .header-subtitle {
 	margin-bottom: 25px;
+	text-align: center;
 }
 // .swiper {
 // 	height: 350px;
@@ -985,11 +986,6 @@
 
 //========================================================================================================================================================
 .Blogs__container {
-	// .swiper-autoheight,
-	// .swiper-autoheight .swiper-slide {
-	// 	height: 100%;
-	// }
-
 	.swiper {
 		padding: 5px 5px 60px 5px;
 	}
@@ -1120,5 +1116,117 @@
 				margin-left: 0px;
 			}
 		}
+	}
+}
+
+.contact {
+	// .contact__container
+
+	&__container {
+	}
+
+	// .contact__column
+
+	&__column {
+	}
+}
+
+.contact-header {
+	text-align: center;
+	// .contact-header__subtitle
+
+	&__subtitle {
+	}
+
+	// .contact-header__title
+
+	&__title {
+	}
+}
+.header-subtitle {
+}
+.contact-items {
+	display: flex;
+	margin: 0px -15px;
+
+	align-items: center;
+	justify-content: space-between;
+}
+.contact-item {
+	padding: 0px 15px;
+	height: 100%;
+	flex: 0 33.333%;
+}
+.column-contact {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 60px 0px 60px 0px;
+	justify-content: space-between;
+	padding: 18px 24px;
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+	// .column-contact__header
+
+	&__header {
+		display: flex;
+	}
+
+	// .column-contact__footer
+
+	&__footer {
+	}
+}
+.header-contact {
+	// .header-contact__info
+	._icon-location::before,
+	._icon-phone-call::before,
+	._icon--email::before {
+		color: #fff;
+		font-size: 30px;
+		background-color: #ff5300;
+		border-radius: 50px;
+		padding: 15px;
+	}
+	._icon-location,
+	._icon-phone-call,
+	._icon--email {
+		margin: 0px 18px 0px 0px;
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	}
+	&__info {
+	}
+}
+.servise {
+	// .servise__name
+	color: #ff5300;
+	font-size: 25px;
+	font-weight: 500;
+	line-height: math.div(31, 25);
+	&__name {
+		color: #373737;
+		font-weight: 600;
+		font-size: 31px;
+		margin: 0px 0px 35px 0px;
+	}
+}
+.footer-contact {
+}
+.imail {
+	display: block;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: math.div(25, 20);
+	&:hover {
+		color: #fc0808;
+	}
+	span {
+		color: #ff5300;
+		transition: color 0.3s ease 0s;
+		&:hover {
+			color: #fc0808;
+		}
+	}
+	&:first-child {
+		padding: 0px 0px 18px 0px;
 	}
 }
