@@ -171,6 +171,13 @@ html.dark {
 			background-color: $DarkColor;
 		}
 	}
+	.servise__name {
+		color: #fff;
+	}
+	.contact__column {
+		box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.144);
+		background-color: $DarkColor;
+	}
 }
 
 // светлая тема
