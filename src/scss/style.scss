@@ -89,6 +89,10 @@ body {
 
 // темная тема
 html.dark {
+	* {
+		transition: all 0.3s ease 0s;
+	}
+
 	._title {
 		color: #faf6f6;
 	}
@@ -107,6 +111,7 @@ html.dark {
 			background-color: $Dark2Color;
 		}
 	}
+
 	.wrapper-digital-agency {
 		background-color: $Dark2Color;
 	}
@@ -182,6 +187,9 @@ html.dark {
 
 // светлая тема
 html.light {
+	* {
+		transition: all 0.3s ease 0s;
+	}
 	body {
 		background-color: #fff;
 		color: $mainColor;

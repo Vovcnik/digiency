@@ -105,12 +105,7 @@
 				margin-right: 0px;
 			}
 		}
-		@media (min-width: $tablet) {
-			&:hover {
-				text-decoration: underline;
-				color: $OrangeColor;
-			}
-		}
+
 		@media (max-width: $mobile) {
 			display: block;
 			&:not(:last-child) {
@@ -200,6 +195,12 @@ html.dark.menu-open .menu__list {
 html.dark .header .menu__item:hover {
 	color: $OrangeColor;
 }
+@media (min-width: $tablet) {
+	html header a:hover {
+		color: $OrangeColor;
+	}
+}
+
 html.dark .page__theme {
 	background: url("@img/sun.svg") 0 0 / 100% no-repeat;
 	transform: rotate(180deg);
