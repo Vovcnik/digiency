@@ -90,7 +90,7 @@ body {
 // темная тема
 html.dark {
 	* {
-		transition: all 0.3s ease 0s;
+		transition: all 0.1s;
 	}
 
 	._title {
@@ -158,6 +158,9 @@ html.dark {
 	.swiper-backface-hidden .swiper-slide {
 		background-color: $Dark1Color;
 	}
+	.footer-slaider__title {
+		text-shadow: rgb(0, 0, 0) 1px 0 10px;
+	}
 	.slide-blog__wrraper {
 		background-color: $DarkColor;
 	}
@@ -176,6 +179,19 @@ html.dark {
 			background-color: $DarkColor;
 		}
 	}
+	@media (min-width: $tablet) {
+		.swiper-slide:hover .footer-slaider__title {
+			color: rgb(10, 10, 10);
+			transition: all 0.7s ease 0s;
+		}
+
+		.swiper-slide:hover .footer-slaider {
+			background-color: #fff;
+			color: rgb(10, 10, 10);
+			transition: color 0.9s ease 0s;
+		}
+	}
+
 	.servise__name {
 		color: #fff;
 	}
@@ -188,7 +204,7 @@ html.dark {
 // светлая тема
 html.light {
 	* {
-		transition: all 0.3s ease 0s;
+		transition: all 0.1s;
 	}
 	body {
 		background-color: #fff;
@@ -197,6 +213,17 @@ html.light {
 	header {
 		background-color: #fff;
 		color: $mainColor;
+	}
+	@media (min-width: $tablet) {
+		.swiper-slide:hover .footer-slaider {
+			background-color: $DarkBackgroundColor;
+			color: #fff;
+			transition: color 0.9s ease 0s;
+		}
+		.swiper-slide:hover .footer-slaider__title {
+			color: #fff;
+			transition: all 0.7s ease 0s;
+		}
 	}
 }
 
