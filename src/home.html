@@ -590,32 +590,40 @@
 
 
 			<section class="messege">
-				<div class="messege__container _container">
+				<div class="messege__container _content">
 					<div class="messege__inner">
 						<div class="messege__img">
 							<img src="img/messeage/Image.png" alt="">
 						</div>
 						<div class="messege__form form-messege">
-							<div class="form-messege__title _title">Send Your
+							<div class="form-messege__title title-messege _title">Send Your
 								<span data-watch-threshold="1" data-watch-once data-watch> Message To Us</span>
 							</div>
 							<form action="#" method="post">
 								<fieldset>
-									<input type="name" placeholder="Name">
-									<input type="email" placeholder="Email">
+
+									<div class="text-input">
+
+										<input class="input" type="name" placeholder="Name">
+										<input class="input" type="email" placeholder="Email">
+									</div>
+
+
+
+									<div class="text-input">
+										<input class="input" type="tel" placeholder="Number">
+										<input class="input" type="text" placeholder="Subject">
+									</div>
+
+
+
+									<textarea class="comments" name="comment" placeholder="Send Massage"></textarea>
+
+									<div class="button">
+										<button class="_button" type="submit">Send Massage</button>
+									</div>
 								</fieldset>
 
-								<fieldset>
-									<input type="tel" placeholder="Number">
-									<input type="text" placeholder="Subject">
-								</fieldset>
-
-								<fieldset>
-									<input type="text">
-								</fieldset>
-								<div class="button">
-									<button class="_button" type="submit">Send Massage</button>
-								</div>
 							</form>
 						</div>
 

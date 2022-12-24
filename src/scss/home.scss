@@ -1297,3 +1297,98 @@
 .contact-wrapper {
 	padding: 60px 0px;
 }
+
+.messege {
+	// .messege__container
+
+	&__container {
+	}
+
+	// .messege__inner
+
+	&__inner {
+		display: flex;
+
+		align-items: flex-start;
+		padding: 0px 0px 30px 0px;
+
+		@media (max-width: $tablet) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	// .messege__img
+
+	&__img {
+		img {
+			max-width: 600px;
+			width: 100%;
+			text-align: center;
+			@media (max-width: $tablet) {
+				max-width: 100%;
+			}
+		}
+	}
+
+	// .messege__form
+
+	&__form {
+		flex: 0 1 55%;
+		@media (max-width: $tablet) {
+			flex: 0 1 100%;
+		}
+	}
+}
+.messege .title-messege {
+	font-size: rem(31);
+
+	@media (max-width: $tablet) {
+		margin: 30px 0px 30px 0px;
+		text-align: center;
+		padding: 0px 20px 0px 20px;
+	}
+}
+
+.form-messege {
+	// .form-messege__title
+
+	&__title {
+	}
+}
+.text-input {
+	display: flex;
+	justify-content: space-between;
+	@media (max-width: 510px) {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	input {
+		padding: 18px;
+		box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+		margin: 0px 0px 18px 0px;
+		flex: 0 1 50%;
+		@media (max-width: 510px) {
+			flex: 0 1 100%;
+		}
+	}
+	.input {
+		&:last-child {
+			margin-left: 10px;
+			@media (max-width: 510px) {
+				margin-left: 0px;
+			}
+		}
+	}
+}
+textarea {
+	resize: none;
+	width: 100%;
+	min-height: 163;
+	padding: 18px;
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+	margin: 11px 0px 29px 0px;
+}
+
+.button {
+}
