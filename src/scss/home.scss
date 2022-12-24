@@ -830,8 +830,7 @@
 		margin: 0px 0px 30px 0px;
 	}
 }
-.great,
-.Blogs {
+.great {
 	.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 		background-color: $OrangeColor;
 		height: 98%;
@@ -844,7 +843,7 @@
 	.swiper-pagination-progressbar.swiper-pagination-horizontal {
 		width: 50px;
 		height: 15px;
-		top: 95.2%;
+		top: 94.2%;
 		left: 47.4%;
 		background: #373737;
 		border-radius: 7.5px;
@@ -1019,6 +1018,27 @@
 		align-items: stretch;
 		transition-property: transform, height;
 	}
+	.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+		background-color: $OrangeColor;
+		height: 98%;
+		border-radius: 7.5px;
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+	.swiper-horizontal > .swiper-pagination-progressbar,
+	.swiper-pagination-progressbar.swiper-pagination-horizontal {
+		width: 50px;
+		height: 15px;
+		top: 95.2%;
+		left: 47.4%;
+		background: #373737;
+		border-radius: 7.5px;
+		bottom: 1px;
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
 }
 
 .slide-blog__wrraper {
@@ -1033,6 +1053,9 @@
 }
 .Blogs__wrapper {
 	padding: 60px 0px;
+	@media (max-width: $tablet) {
+		padding: 0px;
+	}
 }
 
 .swiper-blog {
@@ -1314,19 +1337,28 @@
 
 		@media (max-width: $tablet) {
 			flex-wrap: wrap;
-			justify-content: center;
+			justify-content: space-between;
+			@media (max-width: $tablet) {
+				justify-content: center;
+			}
 		}
 	}
 
 	// .messege__img
 
 	&__img {
+		margin-right: 30px;
+		flex: 0 1 600px;
+		@media (max-width: $tablet) {
+			text-align: center;
+		}
 		img {
-			max-width: 600px;
+			max-width: 632px;
 			width: 100%;
 			text-align: center;
+			padding-top: 19px;
 			@media (max-width: $tablet) {
-				max-width: 100%;
+				max-width: 450px;
 			}
 		}
 	}
@@ -1334,15 +1366,20 @@
 	// .messege__form
 
 	&__form {
-		flex: 0 1 55%;
+		flex: 0 1 70%;
 		@media (max-width: $tablet) {
 			flex: 0 1 100%;
 		}
 	}
 }
+.messege .messege-button {
+	max-width: 190px;
+}
 .messege .title-messege {
 	font-size: rem(31);
-
+	span {
+		white-space: nowrap;
+	}
 	@media (max-width: $tablet) {
 		margin: 30px 0px 30px 0px;
 		text-align: center;
@@ -1356,6 +1393,7 @@
 	&__title {
 	}
 }
+
 .text-input {
 	display: flex;
 	justify-content: space-between;
@@ -1368,6 +1406,12 @@
 		box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
 		margin: 0px 0px 18px 0px;
 		flex: 0 1 50%;
+		color: #7b7b7b;
+		font-size: rem(16);
+		&:focus-visible {
+			outline-offset: 0px;
+			outline: #f37b3fa6 auto 1px;
+		}
 		@media (max-width: 510px) {
 			flex: 0 1 100%;
 		}
@@ -1384,11 +1428,64 @@
 textarea {
 	resize: none;
 	width: 100%;
-	min-height: 163;
+	min-height: 163px;
 	padding: 18px;
 	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
 	margin: 11px 0px 29px 0px;
+	&:focus-visible {
+		outline: #f37b3f auto 1px;
+	}
 }
 
-.button {
+.leble {
+	// .leble__container
+
+	&__container {
+	}
+}
+
+.label-items {
+	display: flex;
+	justify-content: space-between;
+
+	margin: 0px -30px;
+	@media (max-width: $tablet) {
+		margin: 0px -5px;
+	}
+
+	@include adaptiveValue("padding-top", 150, 20);
+	@include adaptiveValue("padding-bottom", 150, 20);
+}
+.label-item {
+	flex: 0 1 25%;
+	padding: 0px 30px;
+	@media (max-width: $tablet) {
+		padding: 0px 5px;
+	}
+}
+.label-content {
+	position: relative;
+	text-align: center;
+
+	.img1 {
+		position: absolute;
+		top: 0;
+		left: auto;
+		right: auto;
+		transition: all 0.3s ease 0s;
+		width: 100%;
+	}
+
+	.img2 {
+		opacity: 0;
+		transition: all 0.3s ease 0s;
+		width: 100%;
+	}
+}
+.label-content:hover .img2 {
+	opacity: 1;
+	transform: scale(1.1);
+}
+.label-content:hover .img1 {
+	opacity: 0;
 }
