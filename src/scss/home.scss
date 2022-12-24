@@ -1407,6 +1407,7 @@
 		margin: 0px 0px 18px 0px;
 		flex: 0 1 50%;
 		color: #7b7b7b;
+		font-family: "Work Sans";
 		font-size: rem(16);
 		&:focus-visible {
 			outline-offset: 0px;
@@ -1472,20 +1473,23 @@ textarea {
 		top: 0;
 		left: auto;
 		right: auto;
-		transition: all 0.3s ease 0s;
+		transition: all 0.5s ease 0s;
 		width: 100%;
 	}
 
 	.img2 {
 		opacity: 0;
-		transition: all 0.3s ease 0s;
+		transition: all 0.4s ease 0s;
 		width: 100%;
 	}
 }
 .label-content:hover .img2 {
-	opacity: 1;
+	opacity: 0.7;
 	transform: scale(1.1);
 }
 .label-content:hover .img1 {
 	opacity: 0;
+}
+.maps {
+	padding: 50px 0px 0px 0px;
 }
