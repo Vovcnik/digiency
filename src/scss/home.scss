@@ -547,6 +547,10 @@
 	// .people__wrapper
 
 	&__wrapper {
+<<<<<<< HEAD
+		@include adaptiveValue("padding-top", 100, 50);
+=======
+>>>>>>> 11d4a9a4b35e7186d43240b3ca62eb19d5b76a05
 	}
 
 	// .people__container
@@ -1058,7 +1062,7 @@
 .Blogs__wrapper {
 	padding: 60px 0px;
 	@media (max-width: $tablet) {
-		padding: 0px;
+		padding: 30px 0px 20px 0px;
 	}
 }
 
@@ -1355,6 +1359,7 @@
 		flex: 0 1 600px;
 		@media (max-width: $tablet) {
 			text-align: center;
+			padding: 0px 0px 50px 0px;
 		}
 		img {
 			max-width: 632px;
