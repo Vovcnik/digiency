@@ -1518,7 +1518,8 @@ textarea {
 .maps {
 	padding: 50px 0px 0px 0px;
 }
-//blog
+
+//blog start
 .our-blog {
 	// .our-blog__container
 
@@ -1532,21 +1533,146 @@ textarea {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		@include adaptiveValue("height", 500, 300);
+		@include adaptiveValue("padding-top", 208, 108);
 	}
 	// .our-blog__title
 
 	&__title {
 		font-weight: 700;
-		font-size: 48px;
 		color: #373737;
+		@include adaptiveValue("font-size", 48, 28);
 	}
 
 	// .our-blog__sutitle
 
 	&__sutitle {
+		@include adaptiveValue("padding-bottom", 108, 58);
+	}
+
+	&__wrapper {
+		background: #fff7f4;
 	}
 }
-.wrapper {
-	background: #fff7f4;
+
+//blog finish
+
+//post-blog start
+.post-blog {
+	// .post-blog__container
+
+	&__container {
+	}
+
+	// .post-blog__atems
+
+	&__atems {
+		@include adaptiveValue("margin-top", 120, 0);
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+	}
 }
+.atems-blog-post {
+}
+.post {
+	// .post__letes
+
+	&__letes {
+		flex: 0 1 770px;
+		margin: 0px 30px 0px 0px;
+	}
+}
+.letes-post {
+	// .letes-post__img
+
+	&__img {
+		max-width: 770px;
+		width: 100%;
+		margin: 0px 0px 40px 0px;
+	}
+
+	// .letes-post__info
+
+	&__info {
+		display: flex;
+		align-items: center;
+		margin: 0px 0px 40px 0px;
+	}
+
+	// .letes-post__title
+
+	&__title {
+		font-weight: 600;
+		font-size: 31.25px;
+		line-height: math.div(39, 31);
+		color: #373737;
+		max-width: 680px;
+		margin-bottom: rem(18);
+	}
+
+	// .letes-post__text
+
+	&__text {
+		max-width: 750px;
+		width: 100%;
+		margin-bottom: rem(30);
+	}
+
+	// .letes-post__btn
+
+	&__btn {
+		margin: 0px 0px 60px 0px;
+	}
+}
+._icon-timer1 {
+	left: -15px;
+	top: 50%;
+}
+
+// ._icon-person
+
+._icon-person {
+	left: -15px;
+	top: 50%;
+}
+
+// ._icon-message-circle
+
+._icon-message-circle {
+}
+
+.month {
+}
+.author {
+}
+.Comment {
+}
+.info-name {
+	position: relative;
+	font-size: 20px;
+	margin: 0px 0px 0px 72px;
+	&:first-child {
+		margin: 0px 0px 0px 60px;
+	}
+}
+.saide-bar {
+	flex: 0 1 370px;
+	form {
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+		color: #7b7b7b;
+	}
+	.input {
+		height: 60px;
+		width: 100%;
+		max-width: 360px;
+		padding-left: 20px;
+		&:focus-visible {
+			outline: #f37b3f auto 1px;
+		}
+	}
+}
+
+//post-blog finish
