@@ -46,3 +46,11 @@
 		}
 	}
 }
+
+.bar__title {
+	font-weight: 500;
+	font-size: 25px;
+	line-height: math.div(31, 25);
+	padding-bottom: 30px;
+	color: #373737;
+}
