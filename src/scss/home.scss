@@ -1566,7 +1566,7 @@ textarea {
 	// .post-blog__atems
 
 	&__atems {
-		@include adaptiveValue("margin-top", 120, 0);
+		@include adaptiveValue("margin-top", 120, 10);
 		display: flex;
 		align-items: flex-start;
 		justify-content: center;
