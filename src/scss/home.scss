@@ -1723,13 +1723,28 @@ textarea {
 
 //categories start
 .categories {
+	background: #ffffff;
+	padding: 40px 18px 20px 18px;
+	margin-bottom: 40px;
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
 	// .categories__title
 
 	&__title {
 	}
 }
-.list {
+.list-categori {
 	display: flex;
 	justify-content: space-between;
+	padding-bottom: 20px;
+}
+.list-number {
+	text-transform: capitalize;
+	line-height: 15px;
+	border: 1px solid #7b7b7b;
+	padding: 7px;
+}
+.list-item {
+	font-weight: 500;
+	font-size: 20px;
 }
 //categories finish
