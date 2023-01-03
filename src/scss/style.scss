@@ -216,24 +216,16 @@ html.dark {
 		background-color: #242526;
 		color: #fff;
 	}
-	.saide-bar .post-bar {
-		box-shadow: 0px 2px 4px rgba(250, 249, 249, 0.25);
-		background: #242526;
-		color: #fff;
-	}
+
 	.bar__title {
 		color: #ffffff;
 		transition: all 0.3s ease 0s;
 	}
-	.categories {
+
+	.contur {
 		background: #242526;
-		padding: 40px 18px 20px 18px;
-
-		box-shadow: 0px 1px 10px rgba(248, 245, 245, 0.1);
-		// .categories__title
-
-		&__title {
-		}
+		color: #fff;
+		box-shadow: 0px 1px 10px rgba(252, 252, 252, 0.1);
 	}
 }
 

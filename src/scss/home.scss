@@ -1608,6 +1608,7 @@ textarea {
 		color: #373737;
 		max-width: 680px;
 		margin-bottom: rem(18);
+		padding-left: 10px;
 	}
 
 	// .letes-post__text
@@ -1616,12 +1617,13 @@ textarea {
 		max-width: 750px;
 		width: 100%;
 		margin-bottom: rem(30);
+		padding-left: 10px;
 	}
 
 	// .letes-post__btn
 
 	&__btn {
-		margin: 0px 0px 60px 0px;
+		margin: 0px 0px 60px 10px;
 	}
 }
 ._icon-timer1 {
@@ -1681,11 +1683,6 @@ textarea {
 		color: fieldtext !important;
 	}
 	.post-bar {
-		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-		padding: 40px 5px 0px 18px;
-		margin: 0px 0px 40px 0px;
-		background: #ffffff;
-		color: #373737;
 		// .post-bar__title
 
 		// .post-bar__atems
@@ -1723,10 +1720,6 @@ textarea {
 
 //categories start
 .categories {
-	background: #ffffff;
-	padding: 40px 18px 20px 18px;
-	margin-bottom: 40px;
-	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
 	// .categories__title
 
 	&__title {
@@ -1736,15 +1729,29 @@ textarea {
 	display: flex;
 	justify-content: space-between;
 	padding-bottom: 20px;
+	&:hover {
+		cursor: pointer;
+	}
+	&:hover .list-number {
+		color: #f37b3f;
+		transition: color 0.3s ease 0s;
+		border: 1px solid #f37b3f;
+	}
+	&:hover .list-item {
+		color: #f37b3f;
+		transition: color 0.3s ease 0s;
+	}
 }
 .list-number {
 	text-transform: capitalize;
 	line-height: 15px;
 	border: 1px solid #7b7b7b;
 	padding: 7px;
+	flex: 0 1 35px;
 }
 .list-item {
 	font-weight: 500;
 	font-size: 20px;
 }
+
 //categories finish
