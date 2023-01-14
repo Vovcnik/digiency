@@ -1716,6 +1716,11 @@ textarea {
 			font-size: 20px;
 			line-height: math.div(25, 20);
 			max-width: 250px;
+			transition: color 0.3s ease 0s;
+			cursor: pointer;
+			&:hover {
+				color: #f37b3f;
+			}
 			@media (max-width: $tablet) {
 				font-size: 16px;
 			}
@@ -1795,6 +1800,12 @@ textarea {
 	background: #fff7f4;
 	padding: 4px 12px;
 	margin: 0px 18px 25px 0px;
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	&:hover {
+		background: #f37b3f;
+		color: #fff7f4;
+	}
 }
 
 //tags finish

@@ -237,10 +237,8 @@ html.dark {
 		background: #3a3b3c;
 		color: #fff;
 		&:hover {
-			background: #fff;
-			color: #3a3b3c;
-			transition: all 0.3s ease 0s;
-			cursor: pointer;
+			background: #ff5300;
+			color: #fff;
 		}
 	}
 }
@@ -267,14 +265,6 @@ html.light {
 		.swiper-slide:hover .footer-slaider__title {
 			color: #fff;
 			transition: all 0.7s ease 0s;
-		}
-	}
-	.tags-item {
-		&:hover {
-			background: #3a3b3c;
-			color: #fff7f4;
-			transition: all 0.3s ease 0s;
-			cursor: pointer;
 		}
 	}
 }
